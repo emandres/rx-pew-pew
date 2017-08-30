@@ -17,3 +17,5 @@ const updateLaserCounter = ([color, count]) => {
         counters.item(i).innerHTML = `${count}`
     }
 }
+
+setInterval(() => fireLaser('green'), 1000)
