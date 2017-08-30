@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes laser-shot {
+            0% {
+                display: none;
+                left: 0%;
+            }
+
+            1% {
+                display: block;
+            }
+
+            /* 50% {
+                width: 50px;
+            } */
+
+            100% {
+                width: 100px;
+                /* margin-left: calc(100% - 100px); */
+                left: 100%;
+            }
+        }
+
+        .laser {
+            display: inline-block;
+            position: relative;
+            background-color: lime;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            animation-name: laser-shot;
+            animation-duration: 1s;
+            /* animation-timing-function: ease-out; */
+        }
+
+        body {
+            --font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: var(--font-family);
+        }
+
+        button {
+            font-family: var(--font-family);
+            letter-spacing: 2px;
+        }
+
+        .green {
+            background-color: lime;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .purple {
+            background-color: violet;
+        }
+
+        .laser-button {
+            display: inline-block;
+            height: 50px;
+            width: 90px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .laser-counter {
+            margin-top: 5px;
+            display: inline-block;
+            height: 50px;
+            width: 90px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+
+        h1 {
+            position: absolute;
+            font-size: 80px;
+            line-height: 80px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            transform: rotate(-7deg);
+            margin-top: 20px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .control-panel {
+            margin-top: 150px;
+        }
+
+        #space {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pew Pew!</h1>
+    <div class="control-panel">
+        <button data-color="green" class="laser-button green">Pew</button>
+        <button data-color="red" class="laser-button red">Pew</button>
+        <button data-color="purple" class="laser-button purple">Pew</button>
+    </div>
+    <div>
+        <div class="laser-counter green">0</div>
+        <div class="laser-counter red">0</div>
+        <div class="laser-counter purple">0</div>
+    </div>
+    <div id="space"></div>
+    <script src="/dist/bundle.js"></script>
+</body>
+</html>

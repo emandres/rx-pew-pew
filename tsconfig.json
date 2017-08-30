@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "lib": [
+            "dom",
+            "es2016"
+        ],
+        "outDir": "dist"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
